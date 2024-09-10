@@ -19,5 +19,5 @@ This script works on some generalized assumptions that would be difficult to tak
 
 ## Thanks to
 
-Aman Kharwal for his programming templates.
-Header Image provided by [Freepik](https://www.freepik.com)
+- Aman Kharwal for his programming templates.
+- Header Image provided by [Freepik](https://www.freepik.com)
