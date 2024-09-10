@@ -4,7 +4,8 @@ This project was built to answer a question many of us have. Should I have anoth
 
 The script gives you statistics about your caffeine level specifically when you'd be going to bed.
 You can also enter custom ingestion amounts and sleep times.
-
+### Download Link
+Compiled exe Windows [link]([https://www.freepik.com](https://github.com/Eliya-G/coffee-o-clock/releases/download/v1.0.0/Coffee-o-clock_Windows.zip)
 ## Assumptions 
 This script works on some generalized assumptions that would be difficult to take into account.
 
@@ -18,7 +19,7 @@ This script works on some generalized assumptions that would be difficult to tak
 ![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/github_images/custom_mode.png)
 
 ## Compatibility
-- Built with Python3 version 3.12.5
+- Built with Python3 version 3.12.5.
 
 ## Thanks to
 - Aman Kharwal for his programming templates.
