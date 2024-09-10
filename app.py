@@ -174,6 +174,9 @@ class main(Tkinter.Tk):
 				self.custom_discription = Label(self, text=f"You would have {round(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()), bedtime=timedelta_var), 1)}mg of caffeine in your blood if you went to bed at {str(dropdown_dict[self.dd_button_clicked.get()][0]) + str(dropdown_dict[self.dd_button_clicked.get()][1])}.\nIt is as if you had drank {round(int(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()),bedtime=timedelta_var) / 90 * 100))}% of a cup of coffee before you went to bed.", bd=1, relief=SUNKEN, pady=10)
 				self.custom_discription.grid(row=7, column=0)
 
+def handler():
+    global run
+    run = False
 			
 dropdown_dict = { 
     "1AM":(1,"AM"), 
@@ -203,33 +206,21 @@ dropdown_dict = {
 } 
 		
 
+
 # Main Function Trigger
 root=main()
 iternum = 0
 root.regular_or_custom_mode()
 
-# Button(root, text="Custom Mode", command=root.regular_or_custom_mode).grid(row=9, column=0)
+root.protocol("WM_DELETE_WINDOW", handler)
+run = True
 
 # Clock loop
-while True:
+while run:
 	root.main_time_object = time.localtime()
 	root.update()
 	root.update_idletasks()
 	root.update_class(root.main_time_object)
 	time.sleep(0.5)
 
-
-
-
-
-"""
-Discription:
-This app tells you if it's a good time to drink coffee. 
-
-To Do:
-- Switch cutom mode button to regular mode button.
-- Add blue text to custom mode, then add a blue boarder to the custom mode area
-- Change system sleep when user goes to custome mode to not lag window
--Bugs: 
-
-"""
+root.destroy()
