@@ -5,7 +5,7 @@ This project was built to answer a question many of us have. Should I have anoth
 The project gives you statistics about your caffeine level specifically when you'd be going to bed.
 You can also enter custom ingestion amounts and sleep times.
 ### Download Link
-Compiled exe Windows [link](https://github.com/Eliya-G/coffee-o-clock/releases/download/v1.0.0/Coffee-o-clock_Windows.zip)
+Compiled exe Windows [link](https://github.com/Eliya-G/coffee-o-clock/releases/tag/v1.0.0)
 ## Assumptions 
 The script works on some generalized assumptions that would be difficult to take into account.
 
