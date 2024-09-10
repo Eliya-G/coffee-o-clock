@@ -1,4 +1,4 @@
-![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/images/Header%20Image.png?raw=true)
+![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/github_images/Header%20Image.png)
 
 This project was built to answer a question many of us have. Should I have another cup of coffee? Then will it affect my sleep? If so, by how much?
 
@@ -6,7 +6,6 @@ The script gives you statistics about your caffeine level specifically when you'
 You can also enter custom ingestion amounts and sleep times.
 
 ## Assumptions 
-
 This script works on some generalized assumptions that would be difficult to take into account.
 
 - You are a healthy person.
@@ -14,10 +13,13 @@ This script works on some generalized assumptions that would be difficult to tak
 - You will be consuming the caffeine immediately.
 - You're aware of your own caffeine tolerance.
 
+## Screenshots
+![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/github_images/regular_mode.png)
+![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/github_images/custom_mode.png)
+
 ## Compatibility
 - Built with Python3 version 3.12.5
 
 ## Thanks to
-
 - Aman Kharwal for his programming templates.
 - Header Image provided by [Freepik](https://www.freepik.com)
