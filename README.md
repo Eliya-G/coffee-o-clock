@@ -1,13 +1,13 @@
 ![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/github_images/Header%20Image.png)
 
-This project was built to answer a question many of us have. Should I have another cup of coffee? Then will it affect my sleep? If so, by how much?
+This project was built to answer a question many of us have. Should I have another cup of coffee? 
 
-The script gives you statistics about your caffeine level specifically when you'd be going to bed.
+The project gives you statistics about your caffeine level specifically when you'd be going to bed.
 You can also enter custom ingestion amounts and sleep times.
 ### Download Link
 Compiled exe Windows [link](https://github.com/Eliya-G/coffee-o-clock/releases/download/v1.0.0/Coffee-o-clock_Windows.zip)
 ## Assumptions 
-This script works on some generalized assumptions that would be difficult to take into account.
+The script works on some generalized assumptions that would be difficult to take into account.
 
 - You are a healthy person.
 - You have typical genetics (ex. not caffeine sensitive).
