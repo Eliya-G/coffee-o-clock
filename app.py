@@ -13,7 +13,7 @@ import time	# Required For Time Handling
 class main(Tkinter.Tk):
 	def __init__(self):
 		Tkinter.Tk.__init__(self)
-		self.title("Coffee o' Clock")
+		self.title("Coffee O'Clock")
 		self.iconbitmap("images/the_coffee_icon.ico") 
 		self.resizable(width=False, height=False)
 		self.x=190	# Center Point x
