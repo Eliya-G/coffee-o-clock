@@ -21,6 +21,10 @@ The script works on some generalized assumptions that would be difficult to take
 ## Compatibility
 - Built with Python3 version 3.12.5.
 
+## Coffee Half Life Function
+The following image is the half life function I used.
+![alt text](https://github.com/Eliya-G/coffee-o-clock/blob/main/.github_images/coffee_function.png)
+
 ## Thanks to
 - Aman Kharwal for his programming templates.
 - Header image provided by [Freepik](https://www.freepik.com)
