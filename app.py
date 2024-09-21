@@ -14,7 +14,6 @@ class main(Tkinter.Tk):
 	def __init__(self):
 		Tkinter.Tk.__init__(self)
 		self.title("Coffee O'Clock")
-		self.iconbitmap("images/the_coffee_icon.ico") 
 		self.resizable(width=False, height=False)
 		self.x=190	# Center Point x
 		self.y=130	# Center Point
@@ -59,7 +58,7 @@ class main(Tkinter.Tk):
 
 	# creating Canvas
 	def create_canvas_for_shapes(self):
-		self.canvas=Tkinter.Canvas(self, bg='#F0F0F0')
+		self.canvas=Tkinter.Canvas(self)
 		self.canvas.grid(row=1, column=0)
 		# self.canvas.pack(expand='yes',fill='both')
 		return
