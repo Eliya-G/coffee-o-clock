@@ -22,6 +22,9 @@ class main(Tkinter.Tk):
 		self.time_at_opening = time.localtime()
 		self.main_time_object = time.localtime()
 
+		self.previous_dd_entry = ""
+		self.previous_caffeine_amount = ""
+
 		# Regular Mode
 		self.reg_digital_clock = Label(self, text=self.format_top_time(self.main_time_object),  font=("Arial", 25), bd=2, relief=SUNKEN)
 		h24 = int(time.strftime( "%H", self.time_at_opening ))
@@ -169,6 +172,10 @@ class main(Tkinter.Tk):
 		if self.caffeine_entry.get().isdigit() == False:
 			messagebox.showerror("Error", "Enter numbers only")
 		else:
+			if self.caffeine_entry.get() and dropdown_dict[self.dd_button_clicked.get()] != self.previous_caffeine_amount and self.previous_dd_entry:
+				self.previous_caffeine_amount = self.caffeine_entry.get() 
+				self.previous_dd_entry = dropdown_dict[self.dd_button_clicked.get()]
+
 				timedelta_var = self.time_delta()
 				self.custom_discription = Label(self, text=f"You would have {round(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()), bedtime=timedelta_var), 1)}mg of caffeine in your blood if you went to bed at {str(dropdown_dict[self.dd_button_clicked.get()][0]) + str(dropdown_dict[self.dd_button_clicked.get()][1])}.\nIt is as if you had drank {round(int(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()),bedtime=timedelta_var) / 90 * 100))}% of a cup of coffee before you went to bed.", bd=1, relief=SUNKEN, pady=10)
 				self.custom_discription.grid(row=7, column=0)
