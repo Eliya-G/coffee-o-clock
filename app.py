@@ -88,7 +88,7 @@ class main(Tkinter.Tk):
 			cr.append(self.length*math.sin(math.radians(i*6)-math.radians(90))+self.y)
 			self.canvas.coords(self.sticks[n], tuple(cr))
 		return
-	  # *-*-*-*-*-*-*-*-*-*-*-*- End of clock *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+	  # *-*-*-*-*-*-*-*-*-*-*-*- End of canvas clock *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 	def format_top_time(self, time_object, current_mode=0):
 		if current_mode == 0: # The return value is a string
@@ -103,7 +103,6 @@ class main(Tkinter.Tk):
 
 			formated_AMPM = time.strftime("%p", time_object)
 			return (formated_hour + formated_minutes, formated_AMPM)
-		
 
 	def coffee_half_life(self, caffeine_amount=90, bedtime=24): # Bedtime is the time delta of when you're going to sleep
 		caffeine_amount = caffeine_amount * 0.5 ** (bedtime / 6)
@@ -168,8 +167,6 @@ class main(Tkinter.Tk):
 			time_delta = 12 - current_time[0] + sleep_time[0]
 			return time_delta
 
-
-
 	def custom_enter(self):
 		if self.caffeine_entry.get().isdigit() == False:
 			messagebox.showerror("Error", "Enter numbers only")
@@ -216,8 +213,6 @@ dropdown_dict = {
     "12AM":(12,"PM"), 
 } 
 		
-
-
 # Main Function Trigger
 root=main()
 iternum = 0
@@ -226,7 +221,7 @@ root.regular_or_custom_mode()
 root.protocol("WM_DELETE_WINDOW", handler)
 run = True
 
-# Clock loop
+# Main loop
 while run:
 	root.main_time_object = time.localtime()
 	root.update()
