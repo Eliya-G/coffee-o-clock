@@ -220,6 +220,6 @@ while run:
 	root.update()
 	root.update_idletasks()
 	root.update_class(root.main_time_object)
-	time.sleep(0.5)
+	time.sleep(0.1)
 
 root.destroy()
