@@ -51,20 +51,17 @@ class main(Tkinter.Tk):
 		self.create_canvas_for_shapes()
 		self.creating_background_()
 		self.creating_sticks()
-		return
 
 	# Creating Background
 	def creating_background_(self):
 		self.image=Tkinter.PhotoImage(file='images/clock.gif')
 		self.canvas.create_image(190,130, image=self.image) # This moves the image.
-		return
 
 	# creating Canvas
 	def create_canvas_for_shapes(self):
 		self.canvas=Tkinter.Canvas(self)
 		self.canvas.grid(row=1, column=0)
 		# self.canvas.pack(expand='yes',fill='both')
-		return
 
 	# Creating Moving Sticks
 	def creating_sticks(self):
@@ -72,7 +69,6 @@ class main(Tkinter.Tk):
 		for i in range(3):
 			store=self.canvas.create_line(self.x, self.y,self.x+self.length,self.y+self.length,width=2, fill='red')
 			self.sticks.append(store)
-		return
 
 	# Function Need Regular Update
 	def update_class(self, current_time):
@@ -87,7 +83,6 @@ class main(Tkinter.Tk):
 			cr.append(self.length*math.cos(math.radians(i*6)-math.radians(90))+self.x)
 			cr.append(self.length*math.sin(math.radians(i*6)-math.radians(90))+self.y)
 			self.canvas.coords(self.sticks[n], tuple(cr))
-		return
 	  # *-*-*-*-*-*-*-*-*-*-*-*- End of canvas clock *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
 	def format_top_time(self, time_object, current_mode=0):
@@ -167,8 +162,6 @@ class main(Tkinter.Tk):
 				timedelta_var = self.time_delta()
 				self.custom_description = Label(self, text=f"You would have {round(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()), bedtime=timedelta_var), 1)}mg of caffeine in your blood if you went to bed at {str(dropdown_dict[self.dd_button_clicked.get()][0]) + str(dropdown_dict[self.dd_button_clicked.get()][1])}.\nIt is as if you had drank {round(int(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()),bedtime=timedelta_var) / 90 * 100))}% of a cup of coffee before you went to bed.", bd=1, relief=SUNKEN, pady=10)
 				self.custom_description.grid(row=7, column=0)
-			else:
-				pass
 
 def handler():
     global run
