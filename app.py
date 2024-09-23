@@ -42,7 +42,7 @@ class main(Tkinter.Tk):
 		self.dd_button_clicked.set( "---" )
 		self.custom_dropdown = OptionMenu(self , self.dd_button_clicked, *dropdown_dict.keys(),) 
 		self.custom_enter_button = Button(self, text="Enter",command=self.custom_enter)
-		self.custom_discription = Label(self, text="")
+		self.custom_description = Label(self, text="")
 		self.regular_flip_button = Button(self, text="Regular Mode", command=self.regular_or_custom_mode)
 
 
@@ -131,7 +131,7 @@ class main(Tkinter.Tk):
 			self.custom_dropdown.grid_forget()
 			self.custom_enter_button.grid_forget()
 			self.regular_flip_button.grid_forget()
-			self.custom_discription.grid_forget()
+			self.custom_description.grid_forget()
 			self.reg_digital_clock.grid(row=0, column=0, sticky=W+E)
 			self.info_box1.grid(row=2,column=0, sticky=W+E)
 			self.info_box2.grid(row=3,column=0)
@@ -160,13 +160,13 @@ class main(Tkinter.Tk):
 			messagebox.showerror("Error", "Enter numbers only")
 		else:
 			if self.caffeine_entry.get() != self.previous_caffeine_amount or dropdown_dict[self.dd_button_clicked.get()] != self.previous_dd_entry:
-				self.custom_discription.grid_forget()
+				self.custom_description.grid_forget()
 				self.previous_caffeine_amount = self.caffeine_entry.get() 
 				self.previous_dd_entry = dropdown_dict[self.dd_button_clicked.get()]
 
 				timedelta_var = self.time_delta()
-				self.custom_discription = Label(self, text=f"You would have {round(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()), bedtime=timedelta_var), 1)}mg of caffeine in your blood if you went to bed at {str(dropdown_dict[self.dd_button_clicked.get()][0]) + str(dropdown_dict[self.dd_button_clicked.get()][1])}.\nIt is as if you had drank {round(int(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()),bedtime=timedelta_var) / 90 * 100))}% of a cup of coffee before you went to bed.", bd=1, relief=SUNKEN, pady=10)
-				self.custom_discription.grid(row=7, column=0)
+				self.custom_description = Label(self, text=f"You would have {round(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()), bedtime=timedelta_var), 1)}mg of caffeine in your blood if you went to bed at {str(dropdown_dict[self.dd_button_clicked.get()][0]) + str(dropdown_dict[self.dd_button_clicked.get()][1])}.\nIt is as if you had drank {round(int(self.coffee_half_life(caffeine_amount=int(self.caffeine_entry.get()),bedtime=timedelta_var) / 90 * 100))}% of a cup of coffee before you went to bed.", bd=1, relief=SUNKEN, pady=10)
+				self.custom_description.grid(row=7, column=0)
 			else:
 				pass
 
