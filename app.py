@@ -143,7 +143,7 @@ class main(Tkinter.Tk):
 		current_time = self.format_top_time(self.main_time_object, current_mode=1)
 		sleep_time = dropdown_dict[self.dd_button_clicked.get()]
 
-		if current_time[1] == "AM" and sleep_time[1] == "AM":
+		if current_time[1] == sleep_time[1]:
 			if current_time[0] < sleep_time[0]:
 				time_delta = sleep_time[0] - current_time[0]
 				return time_delta
@@ -151,19 +151,7 @@ class main(Tkinter.Tk):
 				time_delta = 24 - current_time[0] + sleep_time[0]
 				return time_delta
 			
-		if current_time[1] == "PM" and sleep_time[1] == "PM":
-			if current_time[0] < sleep_time[0]:
-				time_delta = sleep_time[0] - current_time[0]
-				return time_delta
-			else:
-				time_delta = 24 - current_time[0] + sleep_time[0]
-				return time_delta
-
-		elif current_time[1] == "PM" and sleep_time[1] == "AM":
-			time_delta = 12 - current_time[0] + sleep_time[0]
-			return time_delta
-
-		elif current_time[1] == "AM" and sleep_time[1] == "PM":
+		else:
 			time_delta = 12 - current_time[0] + sleep_time[0]
 			return time_delta
 
