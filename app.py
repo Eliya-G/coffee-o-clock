@@ -29,7 +29,7 @@ class main(Tkinter.Tk):
 		self.reg_digital_clock = Label(self, text=self.format_top_time(self.main_time_object),  font=("Arial", 25), bd=2, relief=SUNKEN)
 		h24 = int(time.strftime( "%H", self.time_at_opening ))
 		main_timedelta = 24 - h24
-		self.info_box1 = Label(self, text="The info below assumes you are a healthy, average person.\n It also assumes you are going to drink a cup of coffee right now;\n and it's your first cup (8oz/236 mL) of coffee today.\n Containing 90mg of caffeine in the cup.", bd=1, relief=SUNKEN, pady=10)
+		self.info_box1 = Label(self, text="The info below assumes you're healthy, and the average person.\n It also assumes you are going to drink a cup of coffee right now;\n and it's your first cup (8oz/236 mL) of coffee today.\n Containing 90mg of caffeine in the cup.", bd=1, relief=SUNKEN, pady=10)
 		self.info_box2 = Label(self, text=f"You would have {round(self.coffee_half_life(bedtime=main_timedelta), 1)}mg of caffeine in your blood if you went to bed at 12AM.\nIt's as if you had drank {round(int(self.coffee_half_life(bedtime=main_timedelta) / 90 * 100), 0)}% of a cup of coffee before you went to bed.")
 		self.custom_flip_button = Button(self, text="Custom Mode", command=self.regular_or_custom_mode, fg="blue")
 
