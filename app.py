@@ -185,7 +185,9 @@ class main(Tkinter.Tk):
 def handler():
     global run
     run = False
-			
+
+
+#We should avoid hard coding and use a loop to increace readability.
 dropdown_dict = { 
     "1AM":(1,"AM"), 
     "2AM":(2,"AM"), 
@@ -211,6 +213,21 @@ dropdown_dict = {
     "10PM":(10,"PM"), 
     "11PM":(11,"PM"), 
     "12AM":(12,"PM"), 
+
+	# def generate_dropdown_dict():
+   # dropdown_dict = {}
+
+    #for hour in range(1, 13):
+     #   dropdown_dict[f"{hour}AM"] = (hour, "AM")
+      #  dropdown_dict[f"{hour}PM"] = (hour, "PM")
+
+    # Adjust 12PM and 12AM entries
+    #dropdown_dict["12PM"] = (12, "PM")
+    #dropdown_dict["12AM"] = (12, "AM")
+
+   # return dropdown_dict
+
+	
 } 
 		
 # Main Function Trigger
